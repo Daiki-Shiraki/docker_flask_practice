@@ -1,0 +1,15 @@
+version: '3.2'
+
+services: 
+  app: 
+    # image: flask
+    build: ./flask
+    ports:
+      -  "8080:8080" 
+    container_name: 'app'
+    working_dir: '/usr/src/app'
+    volumes:
+     - ./flask_app/src:/usr/src/app
+    tty: true
+    command: python app.py
+    
