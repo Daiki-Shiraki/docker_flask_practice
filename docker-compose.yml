@@ -9,7 +9,7 @@ services:
     container_name: 'app'
     working_dir: '/usr/src/app'
     volumes:
-     - ./flask_app/src:/usr/src/app
+     - ./flask/src:/usr/src/app
     tty: true
     command: python app.py
     
